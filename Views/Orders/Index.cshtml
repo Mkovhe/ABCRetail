@@ -1,0 +1,32 @@
+﻿@model List<string>
+
+<h1>Order Processing Queue</h1>
+
+<form asp-action="Send" method="post" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="orderDetails" class="form-control"
+               placeholder="e.g. Processing order #1023" required />
+        <button type="submit" class="btn btn-primary">Send to Queue</button>
+    </div>
+</form>
+
+<form asp-action="Process" method="post" class="mb-4">
+    <button type="submit" class="btn btn-warning">
+        Process Next Message (removes it from the queue)
+    </button>
+</form>
+
+<h4>Current Queue Messages</h4>
+@if (Model.Count == 0)
+{
+    <p><em>No messages currently in the queue.</em></p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var message in Model)
+        {
+            <li class="list-group-item">@message</li>
+        }
+    </ul>
+}

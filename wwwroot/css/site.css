@@ -1,22 +1,61 @@
-html {
-  font-size: 14px;
-}
+/* ABC Retail - simple styling on top of default Bootstrap */
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --brand-navy: #1a2b4c;
+    --brand-orange: #e8734a;
+    --brand-bg: #f7f8fa;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: var(--brand-bg);
+}
+
+.navbar {
+    background-color: var(--brand-navy) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+    .navbar-brand,
+    .navbar .nav-link {
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+
+        .navbar .nav-link:hover {
+            color: var(--brand-orange) !important;
+        }
+
+h1 {
+    color: var(--brand-navy);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.btn-primary {
+    background-color: var(--brand-orange);
+    border-color: var(--brand-orange);
+}
+
+    .btn-primary:hover {
+        background-color: #d4623a;
+        border-color: #d4623a;
+    }
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+
+.table thead {
+    background-color: var(--brand-navy);
+    color: #ffffff;
+}
+
+.list-group-item {
+    border-left: 3px solid var(--brand-orange);
+}
+
+pre {
+    border: 1px solid #ddd;
 }

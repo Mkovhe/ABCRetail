@@ -1,8 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center py-5">
+    <h1 class="display-4">ABC Retail</h1>
+    <p class="lead text-muted">Cloud-powered order processing, built on Azure Storage.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+            <h5>Customers</h5>
+            <p class="text-muted small">Manage customer profiles</p>
+            <a asp-controller="Customers" asp-action="Index" class="btn btn-primary mt-auto">View Customers</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+            <h5>Products</h5>
+            <p class="text-muted small">Browse and add products</p>
+            <a asp-controller="Products" asp-action="Index" class="btn btn-primary mt-auto">View Products</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+            <h5>Orders</h5>
+            <p class="text-muted small">Track queued order messages</p>
+            <a asp-controller="Orders" asp-action="Index" class="btn btn-primary mt-auto">View Orders</a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+            <h5>Logs</h5>
+            <p class="text-muted small">See application activity</p>
+            <a asp-controller="Logs" asp-action="Index" class="btn btn-primary mt-auto">View Logs</a>
+        </div>
+    </div>
 </div>
