@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <h5 class="card-title">@product.ProductName</h5>
                     <p class="card-text">@product.Description</p>
-                    <p><strong>Price:</strong> R@product.Price.ToString("0.00")</p>
+                    <p><strong>Price:</strong> R@(product.Price.ToString("0.00"))</p>
                     <p><strong>Stock:</strong> @product.StockQuantity</p>
                     <form asp-action="Delete" method="post">
                         <input type="hidden" name="partitionKey" value="@product.PartitionKey" />
